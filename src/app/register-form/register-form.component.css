@@ -1,0 +1,152 @@
+@font-face {
+  font-family: Muli;
+  src: url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+}
+
+.global{
+  font-family: Muli,sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.container{
+  font-family: Muli, sans-serif;
+  border-radius: 5px;
+  background-color: rgba(8, 31, 159, 0.65);
+  padding: 20px 40px;
+  height: fit-content;
+  width: fit-content;
+}
+.container h2{
+  font-size: 35px;
+  text-align: center;
+  color: #fff;
+}
+
+.container a{
+  text-decoration: none;
+  color: lightblue;
+}
+
+.btn{
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: #00b8d4;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+.btn:focus{
+  outline: 0;
+}
+.btn:active{
+  transform: scale(0.98);
+  background-color: rgb(189, 189, 189);
+}
+.btn:hover{
+  border: rgba(236,5,120,0.61) solid 1px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.text{
+  margin-top: 30px;
+}
+.form-control{
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+.form-control input{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0 6px 5px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.form-control input:focus,
+.form-control input:valid{
+  outline: 0;
+}
+.form-control label{
+  position: absolute;
+  top: 15px;
+  left: 0;
+  pointer-events: none;
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label,
+.form-control input:valid + label,
+.form-control input:hover + label{
+  font-size: 20px;
+  transform: translateY(-30px);
+}
+.form-control input:focus{
+  border-color: rgba(255, 190, 228, 0.51);
+}
+
+.HOVER {
+  --width: 100%;
+  --time: 0.7s;
+  width: 300px;
+  position: relative;
+  display: flex;
+  height: 80px;
+  padding: 1em 1em 1em 1em;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: black;
+  background: white;
+  overflow: clip;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.HOVER p {
+  margin-left: 35px;
+  font-family: Muli, sans-serif;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+  font-size: 40px;
+  transition: color var(--time);
+  font-weight: bolder;
+}
+
+.HOVER:hover p {
+  color: white;
+}
+
+.HOVER span {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-radius: 100%;
+  background: rgba(8, 31, 159, 0.65);
+  transform: translate(-50%, -50%);
+  transition: width var(--time), padding-top var(--time);
+}
+
+.HOVER:hover span {
+  width: calc(var(--width) * 2.25);
+  padding-top: calc(var(--width) * 2.25);
+}
