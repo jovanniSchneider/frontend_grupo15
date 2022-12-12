@@ -1,5 +1,5 @@
-<div class = "global">
-  <div class="container">
+<div class = "global" [ngSwitch] = "rol.tipo_rol">
+  <div class="container" *ngSwitchDefault>
     <h2>Inicia Sesión</h2>
     <form>
       <div class="form-control">
@@ -13,4 +13,7 @@
       <button type="submit" (click)="onSubmit()" class="btn globalBtn">Iniciar Sesión</button>
     </form>
   </div>
+    <app-admin-view *ngSwitchCase="'Admin'" ></app-admin-view>
+    <app-client-view *ngSwitchCase="'Cliente'"></app-client-view>
+    <app-pyme-view *ngSwitchCase="'Empresa'" ></app-pyme-view>
 </div>
